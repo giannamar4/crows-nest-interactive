@@ -20,4 +20,10 @@ body {
 //Section for the individual games' pages
 #gameBody {
   // placeholder
+  width: 100%;
+  min-height: 100vh;
+
+  img {
+    width: 100%;
+  }
 }

@@ -187,4 +187,12 @@ a:hover::before {
 }
 .mainHeader:hover {
   color: rgb(109, 10, 109);
+}
+
+#gameBody {
+  width: 100%;
+  min-height: 100vh;
+}
+#gameBody img {
+  width: 100%;
 }/*# sourceMappingURL=home.css.map */
