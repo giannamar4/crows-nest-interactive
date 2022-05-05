@@ -228,4 +228,12 @@ button {
   background-size: cover;
   margin: 0;
   height: 100vh;
+}
+
+#gameBody {
+  width: 100%;
+  min-height: 100vh;
+}
+#gameBody img {
+  width: 100%;
 }/*# sourceMappingURL=home.css.map */
