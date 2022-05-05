@@ -1,6 +1,6 @@
 $darkred: #4e0000;
 // note: cubic bezier is used to customize speed of transition! :D
-$timing: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$timing: cubic-bezier(0.19, 1, 0.22, 1);
 $nav-width-desktop: 40em;
 $nav-width-mobile: 25em;
 $nav-item: 6;
@@ -26,13 +26,13 @@ label {
     left: 0;
     right: 0;
     bottom: 0;
-   
-    content: '';
+
+    content: "";
     opacity: 0;
     pointer-events: none;
-    transition: opacity .5s $timing;
+    transition: opacity 0.5s $timing;
   }
-  // bar stuff 2 
+  // bar stuff 2
   .exie {
     position: fixed;
     top: 1em;
@@ -42,7 +42,7 @@ label {
     height: 2em;
     margin: 0;
     padding: 0;
-    transition: opacity .5s $timing;
+    transition: opacity 0.5s $timing;
     &::before,
     .bar,
     &::after {
@@ -52,8 +52,8 @@ label {
       width: 100%;
       height: 12%;
       background: white;
-      content: '';
-      transition: all .5s $timing;
+      content: "";
+      transition: all 0.5s $timing;
     }
     .bar {
       top: 44%;
@@ -72,11 +72,11 @@ label {
 input:focus + label,
 label:hover {
   .exie {
-    opacity: .75;
+    opacity: 0.75;
   }
 }
 
-// slanted background 
+// slanted background
 nav {
   position: fixed;
   top: 0;
@@ -87,60 +87,63 @@ nav {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  transform: translate3d(0,0,0); 
+  transform: translate3d(0, 0, 0);
   transform: translateX(-100%);
   will-change: transform;
-  transition: transform .5s $timing;
+  transition: transform 0.5s $timing;
   &::before {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0; 
+    left: 0;
     z-index: -1;
     width: $nav-width-mobile;
     background: $darkred;
-    content: '';
+    content: "";
     transform: skewX(15deg) translateX(-100%);
     transform-origin: bottom left;
     will-change: transform;
-    transition: transform .5s $timing;
-    @media(min-width: 40em) {
+    transition: transform 0.5s $timing;
+    @media (min-width: 40em) {
       width: $nav-width-desktop;
     }
   }
 
   // actual nav bar contents
   a {
-    margin: .5em 0;
-    padding: .2em 2em;
+    margin: 0 1em 1.3em 1.3em;
     font-size: 1.5em;
-    color: white;
+    color: grey;
     text-decoration: none;
     font-weight: 500;
     transform: translateX(-100%);
-    transition: color .15s, transform .5s;
+    transition: color 0.15s, transform 0.5s;
     transition-timing-function: $timing;
-  //  underline animation
-&::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width:66%;
-  padding-left: 0;
-  height: 2px;
-  bottom: 0;
-  left: 1;
-  background-color: white;
-  transform: scaleX(0);
-  transform-origin: top left;
-  transition: transform 0.3s ease;
-}
+    //  underline animation
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      padding: 0;
+      height: 2px;
+      bottom: 0;
+      left: 1;
+      background-color: white;
+      transform: scaleX(0);
+      transform-origin: top left;
+      transition: transform 0.3s ease;
+    }
 
     @for $i from 1 through $nav-item {
-      &:nth-child(#{$i}) { transition-delay: 0s, #{50 + (50 * $i)}ms; } 
+      &:nth-child(#{$i}) {
+        transition-delay: 0s, #{50 + (50 * $i)}ms;
+      }
     }
-    &:hover, &:focus {
-      color: black;
+    &:hover,
+    &:focus {
+      color: white;
+      filter: brightness(150%);
     }
   }
 }
@@ -159,7 +162,7 @@ a:hover::before {
     .exie {
       &::before,
       &::after {
-        width: 141.42%; 
+        width: 141.42%;
       }
       &::before {
         transform: rotate(45deg) translateY(-50%);
@@ -181,5 +184,4 @@ a:hover::before {
       transform: translateX(0);
     }
   }
-
 }

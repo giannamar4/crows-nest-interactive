@@ -7,4 +7,12 @@ body {
   font-family: "Press Start 2P", cursive;
 }
 
-@import 'partials/_navbar.scss'
+@import "partials/_navbar.scss";
+
+.mainHeader {
+  color: white;
+  text-align: center;
+  &:hover {
+    color: rgb(109, 10, 109);
+  }
+}
