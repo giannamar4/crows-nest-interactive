@@ -4,10 +4,10 @@ body {
   background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
-@import "partials/_navbar.scss";
+@import 'partials/_navbar.scss';
 
 .mainHeader {
   color: white;
@@ -15,4 +15,9 @@ body {
   &:hover {
     color: rgb(109, 10, 109);
   }
+}
+
+//Section for the individual games' pages
+#gameBody {
+  // placeholder
 }
