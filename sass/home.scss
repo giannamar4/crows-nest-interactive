@@ -4,10 +4,10 @@ body {
   background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
-@import "partials/_navbar.scss";
+@import 'partials/_navbar.scss';
 
 .mainHeader {
   color: white;
@@ -50,7 +50,7 @@ button {
 }
 
 .main {
-  background: url("../images/background.gif");
+  background: url('../images/background.gif');
   background-size: cover;
   margin: 0;
   height: 100vh;
@@ -58,11 +58,20 @@ button {
 
 //Section for the individual games' pages
 #gameBody {
-  // placeholder
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
+  color: goldenrod;
+  background-color: black;
 
   img {
     width: 100%;
+    border-bottom: 5vh solid #0f0f0f;
+  }
+
+  h1 {
+    text-align: center;
   }
 }
