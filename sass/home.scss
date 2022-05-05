@@ -11,8 +11,47 @@ body {
 
 .mainHeader {
   color: white;
+  font-size: 2.4em;
   text-align: center;
+  margin: 0;
+  padding-top: 1em;
   &:hover {
     color: rgb(109, 10, 109);
   }
+}
+h2 {
+  width: 50vw;
+  font-size: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.7em;
+  color: rgb(109, 10, 109);
+  &:hover {
+    color: white;
+  }
+}
+#p1 {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2em;
+  color: rgb(163, 53, 53);
+}
+
+#foto {
+  float: left;
+  padding-left: 5%;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  background: url("../images/background.gif");
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
 }
