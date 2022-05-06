@@ -267,10 +267,54 @@ button {
   color: white;
 }
 
-#gameBody {
+.gameBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
+  color: crimson;
+  background-image: url("../images/space.webp");
+  background-size: contain;
 }
-#gameBody img {
+.gameBody img {
   width: 100%;
+  border-bottom: 5vh solid #0f0f0f;
+  margin-bottom: 50vh;
+}
+.gameBody h1 {
+  text-align: center;
+  font-size: calc(2vw + 2vh);
+}
+.gameBody p {
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gameBody p#progress {
+  font-size: calc(1.5vw + 1.5vh);
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  text-decoration: underline;
+}
+.gameBody section {
+  background-color: rgba(10, 10, 10, 0.5);
+  width: 80vw;
+  border-radius: 3rem;
+  border: 1rem solid rgba(50, 50, 50, 0.5);
+}
+.gameBody section div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.gameBody section div img {
+  width: 30%;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
 }/*# sourceMappingURL=home.css.map */
