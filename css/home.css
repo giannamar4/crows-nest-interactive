@@ -262,6 +262,12 @@ button {
   margin-bottom: 20vh;
   text-decoration: underline;
 }
+.gameBody section {
+  background-color: rgba(10, 10, 10, 0.5);
+  width: 80vw;
+  border-radius: 3rem;
+  border: 1rem solid rgba(50, 50, 50, 0.5);
+}
 .gameBody section div {
   display: flex;
   flex-wrap: wrap;
