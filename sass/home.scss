@@ -35,7 +35,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2em;
-  color: rgb(163, 53, 53);
+  color: whitesmoke;
 }
 
 #foto {
@@ -50,12 +50,51 @@ button {
 }
 
 .main {
-  background: url("../images/background.gif");
-  background-size: cover;
+  background: url("../images/back1.gif");
+  background-size: 200vh;
   margin: 0;
   height: 100vh;
 }
 
+.textBack {
+  background-color: rgba(87, 83, 83, 0.5);
+
+  padding: 0.5em;
+  border: 2px solid $darkred;
+}
+
+.footer {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+
+  background-color: $darkred;
+  color: white;
+
+  dt {
+    padding-bottom: 1.2em;
+    color: darkgrey;
+
+    &:hover {
+      color: white;
+    }
+  }
+  dd {
+    padding-bottom: 0.5em;
+    margin: 0;
+    color: rgb(104, 104, 104);
+    &:hover {
+      color: white;
+    }
+  }
+  #para {
+    width: 50%;
+  }
+}
+.footer2 {
+  text-align: center;
+  color: white;
+}
 //Section for the individual games' pages
 #gameBody {
   // placeholder
