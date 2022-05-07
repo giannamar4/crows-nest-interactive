@@ -306,6 +306,8 @@ button {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  line-height: 2rem;
+  font-size: calc(0.75vw + 0.75vh);
 }
 .gameBody p#progress {
   font-size: calc(1.5vw + 1.5vh);
@@ -318,6 +320,7 @@ button {
   width: 80vw;
   border-radius: 3rem;
   border: 1rem solid rgba(50, 50, 50, 0.5);
+  padding-bottom: 10vh;
 }
 .gameBody section div {
   display: flex;
@@ -331,4 +334,6 @@ button {
   box-sizing: border-box;
   border: none;
   margin: 0;
+  border-radius: 20px;
+  border: 5px solid gray;
 }/*# sourceMappingURL=home.css.map */
