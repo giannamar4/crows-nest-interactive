@@ -209,7 +209,7 @@ h2:hover {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2em;
-  color: rgb(163, 53, 53);
+  color: whitesmoke;
 }
 
 #foto {
@@ -224,10 +224,47 @@ button {
 }
 
 .main {
-  background: url("../images/background.gif");
-  background-size: cover;
+  background: url("../images/back1.gif");
+  background-size: 200vh;
   margin: 0;
   height: 100vh;
+}
+
+.textBack {
+  background-color: rgba(87, 83, 83, 0.5);
+  padding: 0.5em;
+  border: 2px solid #4e0000;
+}
+
+.footer {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+  background-color: #4e0000;
+  color: white;
+}
+.footer dt {
+  padding-bottom: 1.2em;
+  color: darkgrey;
+}
+.footer dt:hover {
+  color: white;
+}
+.footer dd {
+  padding-bottom: 0.5em;
+  margin: 0;
+  color: rgb(104, 104, 104);
+}
+.footer dd:hover {
+  color: white;
+}
+.footer #para {
+  width: 50%;
+}
+
+.footer2 {
+  text-align: center;
+  color: white;
 }
 
 .gameBody {
