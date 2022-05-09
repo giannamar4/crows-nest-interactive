@@ -206,10 +206,12 @@ h2:hover {
 
 #p1 {
   width: 50vw;
+  line-height: 1.4em;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.2em;
+  font-size: 1.7em;
   color: whitesmoke;
+  font-family: "Koulen", cursive;
 }
 
 #foto {
@@ -260,6 +262,18 @@ button {
 }
 .footer #para {
   width: 50%;
+}
+
+#learn {
+  height: 3.3em;
+  font-family: "Press Start 2P", cursive;
+  border: 2px solid #4e0000;
+  border-radius: 4px;
+}
+#learn:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
 
 .footer2 {
