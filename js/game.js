@@ -17,7 +17,17 @@ const gamesList = new Map([
 //Function that generates all of the elements for the page
 const generatePage = () => {
     const gameInfo = gamesList.get(document.title.toLowerCase());
-    document.getElementsByTagName("img")[0].setAttribute("src",`./images/voidcageBanner.png`);
+    document.getElementsByTagName("img")[0].setAttribute("src",`./images/${gameInfo["name"]}Banner.png`);
+    document.getElementsByTagName("h1")[0].textContent = `Welcome to ${gameInfo["name"].substring(0,1).toUpperCase()+gameInfo["name"].substring(1,gameInfo["name"].length)}`;
+    document.getElementsByTagName("p")[0].textContent = gameInfo["description"];
+    document.getElementsByTagName("p")[1].textContent = `Release Progress: ${gameInfo["progress"]}`;
+    const galleryDiv = document.getElementsByTagName("div")[0];
+    for(let i=1; i<=3; i++) {
+        const image = document.createElement("img");
+        image.setAttribute("alt",`Screenshot ${i}`);
+        image.setAttribute("src",`./images/${gameInfo["name"] + i}.png`);
+        galleryDiv.appendChild(image);
+    }
 }
 
 generatePage();
