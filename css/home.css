@@ -193,7 +193,6 @@ a:hover::before {
 }
 
 h2 {
-  width: 50vw;
   font-size: 3em;
   margin-left: auto;
   margin-right: auto;
@@ -205,18 +204,13 @@ h2:hover {
 }
 
 #p1 {
-  width: 50vw;
+  width: calc(42vw + 42vh);
   line-height: 1.4em;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.7em;
   color: whitesmoke;
   font-family: "Koulen", cursive;
-}
-
-#foto {
-  float: left;
-  padding-left: 5%;
 }
 
 button {
@@ -231,11 +225,17 @@ button {
   margin: 0;
   height: 100vh;
 }
+.main img {
+  float: left;
+  position: relative;
+  width: calc(12vw + 12vh);
+  white-space: nowrap;
+}
 
 .textBack {
   background-color: rgba(87, 83, 83, 0.5);
-  padding: 0.5em;
   border: 2px solid #4e0000;
+  display: inline-block;
 }
 
 .footer {
@@ -244,6 +244,11 @@ button {
   justify-content: space-around;
   background-color: #4e0000;
   color: white;
+  width: 100%;
+}
+.footer img {
+  width: calc(7vw + 7vh);
+  height: calc(7vw + 7vh);
 }
 .footer dt {
   padding-bottom: 1.2em;
