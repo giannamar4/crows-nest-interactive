@@ -341,4 +341,36 @@ button {
   margin: 0;
   border-radius: 20px;
   border: 5px solid gray;
+}
+.gameBody .footer {
+  display: flex;
+  padding: 1em;
+  justify-content: space-around;
+  background-color: #4e0000;
+  color: white;
+  width: 100%;
+}
+.gameBody .footer img {
+  width: calc(7vw + 7vh);
+  height: calc(7vw + 7vh);
+  border: none;
+  margin: 0;
+}
+.gameBody .footer dt {
+  padding-bottom: 1.2em;
+  color: darkgrey;
+}
+.gameBody .footer dt:hover {
+  color: white;
+}
+.gameBody .footer dd {
+  padding-bottom: 0.5em;
+  margin: 0;
+  color: rgb(104, 104, 104);
+}
+.gameBody .footer dd:hover {
+  color: white;
+}
+.gameBody .footer #para {
+  width: 50%;
 }/*# sourceMappingURL=home.css.map */

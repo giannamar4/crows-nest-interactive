@@ -5,10 +5,10 @@ body {
   background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
-@import "partials/_navbar.scss";
+@import 'partials/_navbar.scss';
 
 .mainHeader {
   color: white;
@@ -37,7 +37,7 @@ h2 {
   margin-right: auto;
   font-size: 1.7em;
   color: whitesmoke;
-  font-family: "Koulen", cursive;
+  font-family: 'Koulen', cursive;
 }
 
 button {
@@ -47,7 +47,7 @@ button {
 }
 
 .main {
-  background: url("../images/back1.gif");
+  background: url('../images/back1.gif');
   background-size: 200vh;
   margin: 0;
   height: 100vh;
@@ -98,7 +98,7 @@ button {
 }
 #learn {
   height: 3.3em;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   border: 2px solid $darkred;
   border-radius: 4px;
   &:hover {
@@ -123,7 +123,7 @@ button {
   width: 100%;
   min-height: 100vh;
   color: crimson;
-  background-image: url("../images/space.webp");
+  background-image: url('../images/space.webp');
   background-size: contain;
   img {
     width: 100%;
@@ -172,6 +172,41 @@ button {
         border-radius: 20px;
         border: 5px solid gray;
       }
+    }
+  }
+
+  .footer {
+    display: flex;
+    padding: 1em;
+    justify-content: space-around;
+    background-color: $darkred;
+    color: white;
+    width: 100%;
+
+    img {
+      width: calc(7vw + 7vh);
+      height: calc(7vw + 7vh);
+      border: none;
+      margin: 0;
+    }
+    dt {
+      padding-bottom: 1.2em;
+      color: darkgrey;
+
+      &:hover {
+        color: white;
+      }
+    }
+    dd {
+      padding-bottom: 0.5em;
+      margin: 0;
+      color: rgb(104, 104, 104);
+      &:hover {
+        color: white;
+      }
+    }
+    #para {
+      width: 50%;
     }
   }
 }

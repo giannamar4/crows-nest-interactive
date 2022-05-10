@@ -57,30 +57,30 @@ const generatePage = () => {
     }
 
     //Generates the footer
-    // document.body.appendChild(document.createElement("footer"));
-    // document.getElementsByTagName("footer")[0].classList.add("footer");
-    // document.getElementsByTagName("footer")[0].innerHTML = `<img src="images/capstoneLogo.png" height="150vh" width="150vw">
-    //     <dl>
-    //         <dt>Find us on Steam!</dt>
-    //         <dd>Void Cage</dd>
-    //         <dd>13</dd>
-    //         <dd>Hylophobia</dd>
+    document.body.appendChild(document.createElement("footer"));
+    document.getElementsByTagName("footer")[0].classList.add("footer");
+    document.getElementsByTagName("footer")[0].innerHTML = `<img src="images/capstoneLogo.png">
+        <dl>
+            <dt>Find us on Steam!</dt>
+            <dd>Void Cage</dd>
+            <dd>13</dd>
+            <dd>Hylophobia</dd>
     
-    //     </dl>
+        </dl>
     
-    //     <dl>
-    //         <dt>Useful Links</dt>
-    //         <dd>Games</dd>
-    //         <dd>Kick Starter</dd>
-    //         <dd>Help</dd>
-    //     </dl>
-    //     <dl class="foot-item">
-    //         <dt>Contact Us</dt>
-    //         <dd>crowsnest@gmail.com</dd>
-    //         <br>
-    //         <dd>+01(555)333-3333</dd>
-    //         <dd></dd>
-    //     </dl>`
+        <dl>
+            <dt>Useful Links</dt>
+            <dd>Games</dd>
+            <dd>Kick Starter</dd>
+            <dd>Help</dd>
+        </dl>
+        <dl class="foot-item">
+            <dt>Contact Us</dt>
+            <dd>crowsnest@gmail.com</dd>
+            <br>
+            <dd>+01(555)333-3333</dd>
+            <dd></dd>
+        </dl>`
 }
 
 generatePage();
