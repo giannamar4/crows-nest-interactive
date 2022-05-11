@@ -12,17 +12,18 @@ class GamePage {
 const gamesList = new Map([
     ["voidcage",new GamePage("voidcage",`Play as a lone crewman on the the interstellar transport ship, the VOIDCAGE, which is on route to transport a collection of alien lifeforms from across the galaxy. As a mysterious breach rocks the ship, you will have to struggle to survive and find a way off the ship as hostile creatures take over and the VOIDCAGE begins to collapse. Arm yourself with scattered tools from the crew and learn to conquer the intergalactic food chain before you're consumed, either by the aliens, or the void of space.`,"Out Now!",true)],
     ["13",new GamePage("13",``,"In Development",false)],
-    ["hylophobia",new GamePage("hylophobia",``,"In Development",false)]
+    ["hylophobia",new GamePage("hylophobia",`A hunting party entering the forest slowly dissappears one by one during a trip. A mysterious force stalks the hunters aiming to pick them off to the last man. As a hunter, locate your lost partners, scavenge for supplies, and set traps to catch whatever monster is prowling the forest before it hunts you.`,"In Development",false)]
 ]);
 
 //Function that generates all of the elements for the page
 const generatePage = () => {
     const gameInfo = gamesList.get(document.title.toLowerCase());
     
-    //Generates the banner for the page
+    //Generates the banner and the background for the page
     const banner = document.createElement("img");
     banner.setAttribute("src",`./images/${gameInfo["name"]}Banner.png`);
     document.body.appendChild(banner);
+    document.getElementsByClassName("gameBody")[0].style.backgroundImage = `url(./images/${gameInfo["name"]}Background.webp)`;
 
     //Generates the game title and description
     const descriptionSection = document.createElement("section");
@@ -53,8 +54,13 @@ const generatePage = () => {
             galleryDiv.appendChild(image);
         }
         gallerySection.appendChild(galleryDiv);
-        document.body.appendChild(gallerySection);        
+               
+    }else{
+        const placeholderText = document.createElement("p");
+        placeholderText.textContent = "No images yet. Come back later!";
+        gallerySection.appendChild(placeholderText);
     }
+    document.body.appendChild(gallerySection); 
 
     //Generates the footer
     document.body.appendChild(document.createElement("footer"));

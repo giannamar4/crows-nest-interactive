@@ -123,8 +123,11 @@ button {
   width: 100%;
   min-height: 100vh;
   color: crimson;
-  background-image: url('../images/space.webp');
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
   img {
     width: 100%;
     border-bottom: 5vh solid #0f0f0f;
@@ -182,6 +185,7 @@ button {
     background-color: $darkred;
     color: white;
     width: 100%;
+    box-sizing: border-box;
 
     img {
       width: calc(7vw + 7vh);
