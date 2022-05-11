@@ -181,6 +181,56 @@ a:hover::before {
   transform: translateX(0);
 }
 
+.carousel {
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .mainHeader {
   color: white;
   font-size: 2.4em;
@@ -220,16 +270,16 @@ button {
 }
 
 .main {
-  background: url("../images/back1.gif");
-  background-size: 200vh;
   margin: 0;
-  height: 100vh;
+  background-color: black;
 }
 .main img {
   float: left;
   position: relative;
-  width: calc(12vw + 12vh);
+  width: calc(11vw + 11vh);
   white-space: nowrap;
+  padding: 0;
+  margin: 0;
 }
 
 .textBack {
@@ -265,9 +315,6 @@ button {
 .footer dd:hover {
   color: white;
 }
-.footer #para {
-  width: 50%;
-}
 
 #learn {
   height: 3.3em;
@@ -286,6 +333,26 @@ button {
   color: white;
 }
 
+@media only screen and (max-width: 1493px) {
+  .main {
+    height: 150vh;
+  }
+  .main img {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .textBack {
+    display: block;
+  }
+}
 .gameBody {
   display: flex;
   flex-direction: column;
