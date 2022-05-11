@@ -17,6 +17,8 @@ body {
 }
 .slides {
   display: none;
+  widthn: 100vw;
+  height: 100vh;
 }
 .prev,
 .next {
@@ -47,7 +49,7 @@ body {
 }
 .fade {
   animation-name: fade;
-  animation-duration: 3.5s;
+  animation-duration: 4.5s;
 }
 
 @keyframes fade {
