@@ -295,6 +295,7 @@ button {
   background-color: #4e0000;
   color: white;
   width: 100%;
+  box-sizing: border-box;
 }
 .footer img {
   width: calc(7vw + 7vh);
