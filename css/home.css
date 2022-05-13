@@ -446,4 +446,23 @@ button {
 }
 .gameBody .footer #para {
   width: 50%;
+}
+
+#gamePage {
+  background-image: url("images/back1.gif");
+}
+#gamePage h1 {
+  text-align: center;
+  color: white;
+}
+#gamePage .game {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#gamePage .game img {
+  width: calc(15vw + 15vh);
+}
+#gamePage .game p {
+  width: calc(15vw + 15vh);
 }/*# sourceMappingURL=home.css.map */

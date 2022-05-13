@@ -284,3 +284,24 @@ button {
     }
   }
 }
+
+// game page
+#gamePage {
+  background-image: url("images/back1.gif");
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  .game {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    img {
+      width: calc(15vw + 15vh);
+    }
+    p {
+      width: calc(15vw + 15vh);
+    }
+  }
+}
