@@ -23,8 +23,15 @@ function showSlides(n) {
   }
 
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  // dots[slideIndex-1].className += " active"; What is this?
   slideIndex++;
-
 }
 
+//Allows the carousel to switch on its own
+let interval;
+const startInterval = () => {
+  interval = setInterval(() => {plusSlides(1);}, 2000);
+}
+
+const stopInterval = () => {clearInterval(interval);}
+startInterval();

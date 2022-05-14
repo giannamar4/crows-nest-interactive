@@ -1,8 +1,8 @@
 body {
-  background-color: rgb(24, 24, 24);
+  background-color: #181818;
   margin: 0;
   padding: 0;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
 }
 
 input {
@@ -19,6 +19,7 @@ label {
   background: none;
   cursor: pointer;
 }
+
 label::before {
   position: fixed;
   z-index: 1;
@@ -31,6 +32,7 @@ label::before {
   pointer-events: none;
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 label .exie {
   position: fixed;
   top: 1em;
@@ -42,6 +44,7 @@ label .exie {
   padding: 0;
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 label .exie::before,
 label .exie .bar, label .exie::after {
   position: absolute;
@@ -53,13 +56,16 @@ label .exie .bar, label .exie::after {
   content: "";
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 label .exie .bar {
   top: 44%;
 }
+
 label .exie::before {
   top: 0;
   transform-origin: top left;
 }
+
 label .exie::after {
   bottom: 0;
   transform-origin: bottom left;
@@ -85,6 +91,7 @@ nav {
   will-change: transform;
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 nav::before {
   position: absolute;
   top: 0;
@@ -99,11 +106,13 @@ nav::before {
   will-change: transform;
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 @media (min-width: 40em) {
   nav::before {
     width: 40em;
   }
 }
+
 nav a {
   margin: 0 1em 1.3em 1.3em;
   font-size: 1.5em;
@@ -114,6 +123,7 @@ nav a {
   transition: color 0.15s, transform 0.5s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 nav a::before {
   content: "";
   position: absolute;
@@ -128,24 +138,31 @@ nav a::before {
   transform-origin: top left;
   transition: transform 0.3s ease;
 }
+
 nav a:nth-child(1) {
   transition-delay: 0s, 100ms;
 }
+
 nav a:nth-child(2) {
   transition-delay: 0s, 150ms;
 }
+
 nav a:nth-child(3) {
   transition-delay: 0s, 200ms;
 }
+
 nav a:nth-child(4) {
   transition-delay: 0s, 250ms;
 }
+
 nav a:nth-child(5) {
   transition-delay: 0s, 300ms;
 }
+
 nav a:nth-child(6) {
   transition-delay: 0s, 350ms;
 }
+
 nav a:hover, nav a:focus {
   color: white;
   filter: brightness(150%);
@@ -155,29 +172,36 @@ a:hover::before {
   transform: scaleX(1);
 }
 
-[id=navcheck]:checked + label::before {
+[id="navcheck"]:checked + label::before {
   opacity: 1;
   pointer-events: auto;
 }
-[id=navcheck]:checked + label .exie::before, [id=navcheck]:checked + label .exie::after {
+
+[id="navcheck"]:checked + label .exie::before, [id="navcheck"]:checked + label .exie::after {
   width: 141.42%;
 }
-[id=navcheck]:checked + label .exie::before {
+
+[id="navcheck"]:checked + label .exie::before {
   transform: rotate(45deg) translateY(-50%);
 }
-[id=navcheck]:checked + label .exie::after {
+
+[id="navcheck"]:checked + label .exie::after {
   transform: rotate(-45deg) translateY(50%);
 }
-[id=navcheck]:checked + label .exie .bar {
+
+[id="navcheck"]:checked + label .exie .bar {
   transform: scale(0.1);
 }
-[id=navcheck]:checked ~ nav {
+
+[id="navcheck"]:checked ~ nav {
   transform: translateX(0);
 }
-[id=navcheck]:checked ~ nav::before {
+
+[id="navcheck"]:checked ~ nav::before {
   transform: skewX(15deg) translateX(0);
 }
-[id=navcheck]:checked ~ nav a {
+
+[id="navcheck"]:checked ~ nav a {
   transform: translateX(0);
 }
 
@@ -188,7 +212,7 @@ a:hover::before {
 
 .slides {
   display: none;
-  widthn: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -233,6 +257,7 @@ a:hover::before {
     opacity: 1;
   }
 }
+
 .mainHeader {
   color: white;
   font-size: 2.4em;
@@ -240,8 +265,9 @@ a:hover::before {
   margin: 0;
   padding-top: 1em;
 }
+
 .mainHeader:hover {
-  color: rgb(109, 10, 109);
+  color: #6d0a6d;
 }
 
 h2 {
@@ -249,8 +275,9 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.7em;
-  color: rgb(109, 10, 109);
+  color: #6d0a6d;
 }
+
 h2:hover {
   color: white;
 }
@@ -262,7 +289,7 @@ h2:hover {
   margin-right: auto;
   font-size: 1.7em;
   color: whitesmoke;
-  font-family: "Koulen", cursive;
+  font-family: 'Koulen', cursive;
 }
 
 button {
@@ -278,6 +305,7 @@ button {
   padding-bottom: 8em;
   background-color: black;
 }
+
 .main img {
   float: left;
   position: relative;
@@ -302,32 +330,38 @@ button {
   width: 100%;
   box-sizing: border-box;
 }
+
 .footer img {
   width: calc(7vw + 7vh);
   height: calc(7vw + 7vh);
 }
+
 .footer dt {
   padding-bottom: 1.2em;
   color: darkgrey;
 }
+
 .footer dt:hover {
   color: white;
 }
+
 .footer dd {
   padding-bottom: 0.5em;
   margin: 0;
-  color: rgb(104, 104, 104);
+  color: #686868;
 }
+
 .footer dd:hover {
   color: white;
 }
 
 #learn {
   height: 3.3em;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   border: 2px solid #4e0000;
   border-radius: 4px;
 }
+
 #learn:hover {
   background-color: black;
   color: white;
@@ -350,15 +384,14 @@ button {
     display: flex;
     justify-content: center;
   }
-
   h2 {
     text-align: center;
   }
-
   .textBack {
     display: block;
   }
 }
+
 .gameBody {
   display: flex;
   flex-direction: column;
@@ -372,15 +405,18 @@ button {
   background-attachment: fixed;
   background-size: cover;
 }
+
 .gameBody img {
   width: 100%;
   border-bottom: 5vh solid #0f0f0f;
   margin-bottom: 50vh;
 }
+
 .gameBody h1 {
   text-align: center;
   font-size: calc(2vw + 2vh);
 }
+
 .gameBody p {
   width: 75%;
   text-align: center;
@@ -389,12 +425,14 @@ button {
   line-height: 2rem;
   font-size: calc(0.75vw + 0.75vh);
 }
+
 .gameBody p#progress {
   font-size: calc(1.5vw + 1.5vh);
   margin-top: 20vh;
   margin-bottom: 20vh;
   text-decoration: underline;
 }
+
 .gameBody section {
   background-color: rgba(10, 10, 10, 0.75);
   width: 80vw;
@@ -402,6 +440,7 @@ button {
   border: 1rem solid rgba(50, 50, 50, 0.5);
   padding-bottom: 10vh;
 }
+
 .gameBody section div {
   display: flex;
   flex-wrap: wrap;
@@ -409,6 +448,7 @@ button {
   padding-left: 5vw;
   padding-right: 5vw;
 }
+
 .gameBody section div img {
   width: 30%;
   box-sizing: border-box;
@@ -417,6 +457,7 @@ button {
   border-radius: 20px;
   border: 5px solid gray;
 }
+
 .gameBody .footer {
   display: flex;
   padding: 1em;
@@ -426,27 +467,33 @@ button {
   width: 100%;
   box-sizing: border-box;
 }
+
 .gameBody .footer img {
   width: calc(7vw + 7vh);
   height: calc(7vw + 7vh);
   border: none;
   margin: 0;
 }
+
 .gameBody .footer dt {
   padding-bottom: 1.2em;
   color: darkgrey;
 }
+
 .gameBody .footer dt:hover {
   color: white;
 }
+
 .gameBody .footer dd {
   padding-bottom: 0.5em;
   margin: 0;
-  color: rgb(104, 104, 104);
+  color: #686868;
 }
+
 .gameBody .footer dd:hover {
   color: white;
 }
+
 .gameBody .footer #para {
   width: 50%;
 }
@@ -455,10 +502,12 @@ button {
   background-color: #0d0c0d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%2328262b' fill-opacity='0.28'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
 }
+
 #gamePage h1 {
   font-size: 2.8em;
   padding-bottom: 0.3em;
 }
+
 @media only screen and (max-width: 1200px) {
   #gamePage h1 {
     margin-top: 2em;
@@ -475,14 +524,17 @@ button {
     margin-right: auto;
   }
 }
+
 #gamePage h1 {
   text-align: center;
   color: white;
 }
+
 #gamePage h1:hover {
   transform: scale(1.1);
-  color: rgb(109, 10, 109);
+  color: #6d0a6d;
 }
+
 #gamePage p {
   color: white;
   text-align: center;
@@ -491,29 +543,35 @@ button {
   width: calc(37vw + 37vh);
   line-height: 1.4em;
 }
+
 #gamePage .game {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
 #gamePage .game h3 {
   padding-top: 0.7em;
   color: #4e0000;
   text-align: center;
 }
+
 #gamePage .game h3:hover {
   color: white;
   transform: scale(1.1);
 }
+
 #gamePage .game img {
   width: calc(18vw + 18vh);
   margin-top: 1em;
   border: 2px solid white;
   border-radius: 6px;
 }
+
 #gamePage .game img:hover {
   transform: scale(1.1);
 }
+
 #gamePage .game p {
   width: calc(18vw + 18vh);
   padding-bottom: 1.7em;
@@ -527,4 +585,5 @@ button {
 #contactPage {
   text-align: center;
   color: white;
-}/*# sourceMappingURL=home.css.map */
+}
+/*# sourceMappingURL=home.css.map */
