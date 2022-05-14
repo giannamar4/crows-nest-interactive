@@ -527,4 +527,11 @@ button {
 #contactPage {
   text-align: center;
   color: white;
+}
+#contactPage .socials {
+  display: flex;
+}
+#contactPage .socials .icon {
+  width: calc(5vw + 5vh);
+  height: calc(4.5vw + 4.5vh);
 }/*# sourceMappingURL=home.css.map */
