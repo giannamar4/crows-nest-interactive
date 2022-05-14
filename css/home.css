@@ -577,6 +577,64 @@ button {
   padding-bottom: 1.7em;
 }
 
+#gamePage form {
+  border-top: 1rem solid white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: gray;
+}
+
+#gamePage form label {
+  font-size: calc(0.75vw + 0.75vh);
+  position: static;
+  color: white;
+}
+
+#gamePage form input {
+  position: static;
+  opacity: 1;
+  font-family: 'Press Start 2P',cursive;
+  margin-bottom: 5vh;
+  width: 25%;
+  height: 10vh;
+  font-size: calc(1vw + 1vh);
+  color: white;
+  background-color: black;
+  outline: none;
+  position: relative;
+}
+
+#gamePage form input:focus {
+  border-left: 0.25rem solid white;
+  border-bottom: 0.25rem solid white;
+}
+
+#gamePage form select, #gamePage form option {
+  font-family: 'Press Start 2P', cursive;
+  width: 25%;
+  height: 10vh;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+#gamePage form select {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#gamePage form button {
+  margin-bottom: 5vh;
+  width: 15%;
+  height: 10vh;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: calc(1vw + 1vh);
+}
+
 #aboutPage h1 {
   text-align: center;
   color: white;
@@ -586,11 +644,13 @@ button {
   text-align: center;
   color: white;
 }
-/*# sourceMappingURL=home.css.map */
+
 #contactPage .socials {
   display: flex;
 }
+
 #contactPage .socials .icon {
   width: calc(5vw + 5vh);
   height: calc(4.5vw + 4.5vh);
-}/*# sourceMappingURL=home.css.map */
+}
+/*# sourceMappingURL=home.css.map */

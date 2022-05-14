@@ -361,6 +361,63 @@ button {
       padding-bottom: 1.7em;
     }
   }
+
+  form {
+    border-top: 1rem solid white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: gray;  
+    
+    label {
+      font-size: calc(0.75vw + 0.75vh);
+      position: static;
+      color: white;
+    }
+
+    input {
+      position: static;
+      opacity: 1;
+      font-family: 'Press Start 2P',cursive;
+      margin-bottom: 5vh;
+      width: 25%;
+      height: 10vh;
+      font-size: calc(1vw + 1vh);
+      color: white;
+      background-color: black;
+      outline: none;
+      position: relative;
+      &:focus {
+        border-left: 0.25rem solid white;
+        border-bottom: 0.25rem solid white;
+      }
+    }
+
+    select,option {
+      font-family: 'Press Start 2P', cursive;
+      width: 25%;
+      height: 10vh;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+
+    select {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    button {
+      margin-bottom: 5vh;
+      width: 15%;
+      height: 10vh;
+      font-family: "Press Start 2P", cursive;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      font-size: calc(1vw + 1vh);
+    }
+  }
 }
 
 // about page! :D
