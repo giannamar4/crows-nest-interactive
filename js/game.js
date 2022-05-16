@@ -15,6 +15,13 @@ const gamesList = new Map([
     ["hylophobia",new GamePage("hylophobia",`A hunting party entering the forest slowly dissappears one by one during a trip. A mysterious force stalks the hunters aiming to pick them off to the last man. As a hunter, locate your lost partners, scavenge for supplies, and set traps to catch whatever monster is prowling the forest before it hunts you.`,"In Development",false)]
 ]);
 
+//Creates a "section" element which is used by the loading script to reveal pieces of the page as the user scrolls
+const makeSection = (elements) => {
+    const loadSection = document.createElement("section");
+    for(let i of elements) loadSection.appendChild(i);
+    document.body.appendChild(loadSection);
+}
+
 //Function that generates all of the elements for the page
 const generatePage = () => {
     const gameInfo = gamesList.get(document.title.toLowerCase());
@@ -22,26 +29,26 @@ const generatePage = () => {
     //Generates the banner and the background for the page
     const banner = document.createElement("img");
     banner.setAttribute("src",`./images/${gameInfo["name"]}Banner.png`);
-    document.body.appendChild(banner);
+    makeSection([banner]);
     document.getElementsByClassName("gameBody")[0].style.backgroundImage = `url(./images/${gameInfo["name"]}Background.webp)`;
 
     //Generates the game title and description
-    const descriptionSection = document.createElement("section");
+    const descriptionSection = document.createElement("div");
     const title = document.createElement("h1");
     title.textContent = `Welcome to ${gameInfo["name"].substring(0,1).toUpperCase()+gameInfo["name"].substring(1,gameInfo["name"].length)}`;
     const description = document.createElement("p");
     description.textContent = gameInfo["description"];
     descriptionSection.appendChild(title);
     descriptionSection.appendChild(description);
-    document.body.appendChild(descriptionSection);
+    makeSection([descriptionSection]);
 
     //Generates the release progress
     const progress = document.createElement("p");
     progress.textContent = `Release Progress: ${gameInfo["progress"]}`;
-    document.body.appendChild(progress);
+    makeSection([progress]);
 
     //Generates the gallery for the page
-    const gallerySection = document.createElement("section");
+    const gallerySection = document.createElement("div");
     const galleryTitle = document.createElement("h1");
     galleryTitle.textContent = "Gallery";
     gallerySection.appendChild(galleryTitle);
@@ -60,7 +67,7 @@ const generatePage = () => {
         placeholderText.textContent = "No images yet. Come back later!";
         gallerySection.appendChild(placeholderText);
     }
-    document.body.appendChild(gallerySection); 
+    makeSection([gallerySection]);
 
     //Generates the footer
     document.body.appendChild(document.createElement("footer"));
