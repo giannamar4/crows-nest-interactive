@@ -10,9 +10,10 @@ const scrollLoad = () => {
             } 
         }else if(sections.length-1 == i) {
             window.removeEventListener("scroll",scrollLoad);
+            window.removeEventListener("DOMContentLoaded",scrollLoad);
         }
     }
     
 }
-
+window.addEventListener("DOMContentLoaded",scrollLoad);
 window.addEventListener("scroll",scrollLoad);
