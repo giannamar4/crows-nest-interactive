@@ -200,9 +200,11 @@ a:hover::before {
   height: 100vh;
   opacity: 0;
   position: absolute;
+  z-index: -1;
 }
 .slides:nth-of-type(1) {
   opacity: 1;
+  z-index: 1;
 }
 
 .prev,
@@ -314,10 +316,15 @@ button {
 .footer dt:hover {
   color: white;
 }
+.footer a,
+.footer a:visited {
+  text-decoration: none !important;
+}
 .footer dd {
   padding-bottom: 0.5em;
   margin: 0;
   color: rgb(104, 104, 104);
+  text-decoration: none !important;
 }
 .footer dd:hover {
   color: white;

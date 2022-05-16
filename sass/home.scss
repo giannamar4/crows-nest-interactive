@@ -30,8 +30,10 @@ section {
   height: 100vh;
   opacity: 0;
   position: absolute;
+  z-index: -1;
   &:nth-of-type(1) {
     opacity: 1;
+    z-index: 1;
   }
 }
 .prev,
@@ -154,10 +156,15 @@ button {
       color: white;
     }
   }
+  a,
+  a:visited {
+    text-decoration: none !important;
+  }
   dd {
     padding-bottom: 0.5em;
     margin: 0;
     color: rgb(104, 104, 104);
+    text-decoration: none !important;
     &:hover {
       color: white;
     }
@@ -279,7 +286,6 @@ button {
     color: white;
     width: 100%;
     box-sizing: border-box;
-
     img {
       width: calc(7vw + 7vh);
       height: calc(7vw + 7vh);

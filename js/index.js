@@ -39,7 +39,9 @@ const switchSlides = (amount) => {
     currentSlide = slides.length-1;
   }
   slides[lastSlide].style.opacity = 0;
+  slides[lastSlide].style.zIndex = -1;
   slides[currentSlide].style.opacity = 1;
+  slides[currentSlide].style.zIndex= 1;
 }
 
 //Allows the carousel to switch on its own
