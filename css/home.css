@@ -5,6 +5,12 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+section {
+  transition: opacity 1s, transform 1s;
+  opacity: 0;
+  transform: translateY(10%);
+}
+
 input {
   position: fixed;
   opacity: 0;
@@ -433,7 +439,7 @@ button {
   text-decoration: underline;
 }
 
-.gameBody section {
+.gameBody main {
   background-color: rgba(10, 10, 10, 0.75);
   width: 80vw;
   border-radius: 3rem;
@@ -441,7 +447,7 @@ button {
   padding-bottom: 10vh;
 }
 
-.gameBody section div {
+.gameBody main div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -449,7 +455,7 @@ button {
   padding-right: 5vw;
 }
 
-.gameBody section div img {
+.gameBody main div img {
   width: 30%;
   box-sizing: border-box;
   border: none;

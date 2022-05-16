@@ -9,6 +9,12 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+section {
+  transition: opacity 1s, transform 1s;
+  opacity: 0;
+  transform: translateY(10%);
+}
+
 @import 'partials/_navbar.scss';
 
 // carousel
