@@ -73,27 +73,28 @@ const generatePage = () => {
     document.body.appendChild(document.createElement("footer"));
     document.getElementsByTagName("footer")[0].classList.add("footer");
     document.getElementsByTagName("footer")[0].innerHTML = `<img src="images/capstoneLogo.png">
-        <dl>
-            <dt>Find us on Steam!</dt>
-            <dd>Void Cage</dd>
-            <dd>13</dd>
-            <dd>Hylophobia</dd>
-    
-        </dl>
-    
-        <dl>
-            <dt>Useful Links</dt>
-            <dd>Games</dd>
-            <dd>Kick Starter</dd>
-            <dd>Help</dd>
-        </dl>
-        <dl class="foot-item">
-            <dt>Contact Us</dt>
-            <dd>crowsnest@gmail.com</dd>
-            <br>
-            <dd>+01(555)333-3333</dd>
-            <dd></dd>
-        </dl>`
+
+    <dl>
+        <dt>Find us on Steam!</dt>
+       <a  href="voidcage.html"><dd>Void Cage</dd></a>
+    <a href="13.html"><dd>13</dd></a>
+   <a href="hylophobia.html"><dd >Hylophobia</dd></a>
+        
+    </dl>
+
+<dl>
+    <dt>Useful Links</dt>
+   <a href="games.html"><dd>Games</dd></a>
+    <dd>Kick Starter</dd>
+    <dd>Help</dd>
+</dl>
+<dl class="foot-item">
+    <dt>Contact Us</dt>
+    <dd>crowsnest@gmail.com</dd>
+    <br>
+    <dd>+01(555)333-3333</dd>
+    <dd></dd>
+</dl>`
 }
 
 generatePage();
