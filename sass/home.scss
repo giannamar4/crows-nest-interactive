@@ -64,19 +64,6 @@ section {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-// .fade {
-//   animation-name: fade;
-//   animation-duration: 4.5s;
-// }
-
-// @keyframes fade {
-//   from {
-//     opacity: 0.4;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
 
 .mainHeader {
   color: white;
@@ -459,13 +446,36 @@ button {
 // contact page!!
 
 #contactPage {
+  margin-top: 10vh;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .socials {
     display: flex;
+    justify-content: center;
+    column-gap: 5vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     .icon {
       width: calc(5vw + 5vh);
       height: calc(4.5vw + 4.5vh);
+      transition: transform 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
+  }
+
+  h1 {
+    font-size: calc(3vw + 3vh);
+  }
+
+  p {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: calc(1.5vw + 1.5vh);
   }
 }
