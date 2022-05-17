@@ -1,3 +1,8 @@
+a,
+a:visited {
+  text-decoration: none;
+}
+
 body {
   background-color: rgb(24, 24, 24);
   margin: 0;
@@ -584,11 +589,23 @@ button {
   background-color: black;
   color: white;
   font-size: calc(1vw + 1vh);
+  text-decoration: none;
 }
 
 #aboutPage h1 {
   text-align: center;
   color: white;
+  font-size: 2.4em;
+}
+#aboutPage h1:hover {
+  color: #4e0000;
+}
+#aboutPage p {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(39vw + 39vh);
+  color: white;
+  font-size: 1.1em;
 }
 
 #contactPage {

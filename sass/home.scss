@@ -2,11 +2,16 @@ $darkred: #4e0000;
 $purple: rgb(109, 10, 109);
 
 //General + Homepage styling
+a,
+a:visited {
+  text-decoration: none;
+}
+
 body {
   background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 section {
@@ -16,7 +21,7 @@ section {
   width: 100%;
 }
 
-@import 'partials/_navbar.scss';
+@import "partials/_navbar.scss";
 
 // carousel
 .carousel {
@@ -92,7 +97,7 @@ h2 {
   margin-right: auto;
   font-size: 1.7em;
   color: whitesmoke;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
 }
 
 button {
@@ -102,7 +107,7 @@ button {
 }
 
 .main {
-  background: url('../images/back1.gif');
+  background: url("../images/back1.gif");
   background-size: cover;
   margin: 0;
   padding-bottom: 8em;
@@ -159,7 +164,7 @@ button {
 }
 #learn {
   height: 3.3em;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   border: 2px solid $darkred;
   border-radius: 4px;
   &:hover {
@@ -392,7 +397,7 @@ button {
     input {
       position: static;
       opacity: 1;
-      font-family: 'Press Start 2P', cursive;
+      font-family: "Press Start 2P", cursive;
       margin-bottom: 5vh;
       width: 25%;
       height: 10vh;
@@ -409,7 +414,7 @@ button {
 
     select,
     option {
-      font-family: 'Press Start 2P', cursive;
+      font-family: "Press Start 2P", cursive;
       width: 25%;
       height: 10vh;
       cursor: pointer;
@@ -426,11 +431,12 @@ button {
       margin-bottom: 5vh;
       width: 15%;
       height: 10vh;
-      font-family: 'Press Start 2P', cursive;
+      font-family: "Press Start 2P", cursive;
       cursor: pointer;
       background-color: black;
       color: white;
       font-size: calc(1vw + 1vh);
+      text-decoration: none;
     }
   }
 }
@@ -440,6 +446,17 @@ button {
   h1 {
     text-align: center;
     color: white;
+    font-size: 2.4em;
+    &:hover {
+      color: $darkred;
+    }
+  }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(39vw + 39vh);
+    color: white;
+    font-size: 1.1em;
   }
 }
 
@@ -467,7 +484,7 @@ button {
       cursor: pointer;
       &:hover {
         transform: scale(1.2);
-        filter: none
+        filter: none;
       }
     }
   }
