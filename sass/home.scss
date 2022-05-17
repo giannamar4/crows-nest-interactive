@@ -462,9 +462,12 @@ button {
     .icon {
       width: calc(5vw + 5vh);
       height: calc(4.5vw + 4.5vh);
-      transition: transform 1s;
+      filter: grayscale(1) sepia(0) hue-rotate(0);
+      transition: transform 0.2s, filter 0.2s;
+      cursor: pointer;
       &:hover {
         transform: scale(1.2);
+        filter: none
       }
     }
   }
