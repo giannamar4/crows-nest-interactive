@@ -4,7 +4,7 @@ a:visited {
 }
 
 body {
-  background-color: #181818;
+  background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
   font-family: "Press Start 2P", cursive;
@@ -32,7 +32,6 @@ label {
   background: none;
   cursor: pointer;
 }
-
 label::before {
   position: fixed;
   z-index: 1;
@@ -40,12 +39,11 @@ label::before {
   left: 0;
   right: 0;
   bottom: 0;
-  content: '';
+  content: "";
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 label .exie {
   position: fixed;
   top: 1em;
@@ -57,7 +55,6 @@ label .exie {
   padding: 0;
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 label .exie::before,
 label .exie .bar, label .exie::after {
   position: absolute;
@@ -66,19 +63,16 @@ label .exie .bar, label .exie::after {
   width: 100%;
   height: 12%;
   background: white;
-  content: '';
+  content: "";
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 label .exie .bar {
   top: 44%;
 }
-
 label .exie::before {
   top: 0;
   transform-origin: top left;
 }
-
 label .exie::after {
   bottom: 0;
   transform-origin: bottom left;
@@ -104,7 +98,6 @@ nav {
   will-change: transform;
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 nav::before {
   position: absolute;
   top: 0;
@@ -113,19 +106,17 @@ nav::before {
   z-index: -1;
   width: 25em;
   background: #4e0000;
-  content: '';
+  content: "";
   transform: skewX(15deg) translateX(-100%);
   transform-origin: bottom left;
   will-change: transform;
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 @media (min-width: 40em) {
   nav::before {
     width: 40em;
   }
 }
-
 nav a {
   margin: 0 1em 1.3em 1.3em;
   font-size: 1.5em;
@@ -136,9 +127,8 @@ nav a {
   transition: color 0.15s, transform 0.5s;
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 nav a::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -151,31 +141,24 @@ nav a::before {
   transform-origin: top left;
   transition: transform 0.3s ease;
 }
-
 nav a:nth-child(1) {
   transition-delay: 0s, 100ms;
 }
-
 nav a:nth-child(2) {
   transition-delay: 0s, 150ms;
 }
-
 nav a:nth-child(3) {
   transition-delay: 0s, 200ms;
 }
-
 nav a:nth-child(4) {
   transition-delay: 0s, 250ms;
 }
-
 nav a:nth-child(5) {
   transition-delay: 0s, 300ms;
 }
-
 nav a:nth-child(6) {
   transition-delay: 0s, 350ms;
 }
-
 nav a:hover, nav a:focus {
   color: white;
   filter: brightness(150%);
@@ -185,36 +168,29 @@ a:hover::before {
   transform: scaleX(1);
 }
 
-[id='navcheck']:checked + label::before {
+[id=navcheck]:checked + label::before {
   opacity: 1;
   pointer-events: auto;
 }
-
-[id='navcheck']:checked + label .exie::before, [id='navcheck']:checked + label .exie::after {
+[id=navcheck]:checked + label .exie::before, [id=navcheck]:checked + label .exie::after {
   width: 141.42%;
 }
-
-[id='navcheck']:checked + label .exie::before {
+[id=navcheck]:checked + label .exie::before {
   transform: rotate(45deg) translateY(-50%);
 }
-
-[id='navcheck']:checked + label .exie::after {
+[id=navcheck]:checked + label .exie::after {
   transform: rotate(-45deg) translateY(50%);
 }
-
-[id='navcheck']:checked + label .exie .bar {
+[id=navcheck]:checked + label .exie .bar {
   transform: scale(0.1);
 }
-
-[id='navcheck']:checked ~ nav {
+[id=navcheck]:checked ~ nav {
   transform: translateX(0);
 }
-
-[id='navcheck']:checked ~ nav::before {
+[id=navcheck]:checked ~ nav::before {
   transform: skewX(15deg) translateX(0);
 }
-
-[id='navcheck']:checked ~ nav a {
+[id=navcheck]:checked ~ nav a {
   transform: translateX(0);
 }
 
@@ -232,7 +208,6 @@ a:hover::before {
   position: absolute;
   z-index: -1;
 }
-
 .slides:nth-of-type(1) {
   opacity: 1;
   z-index: 1;
@@ -274,9 +249,8 @@ a:hover::before {
   margin: 0;
   padding-top: 1em;
 }
-
 .mainHeader:hover {
-  color: #6d0a6d;
+  color: rgb(109, 10, 109);
 }
 
 h2 {
@@ -284,9 +258,8 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.7em;
-  color: #6d0a6d;
+  color: rgb(109, 10, 109);
 }
-
 h2:hover {
   color: white;
 }
@@ -314,7 +287,6 @@ button {
   padding-bottom: 8em;
   background-color: black;
 }
-
 .main img {
   float: left;
   position: relative;
@@ -339,33 +311,27 @@ button {
   width: 100%;
   box-sizing: border-box;
 }
-
 .footer img {
   width: calc(7vw + 7vh);
   height: calc(7vw + 7vh);
 }
-
 .footer dt {
   padding-bottom: 1.2em;
   color: darkgrey;
 }
-
 .footer dt:hover {
   color: white;
 }
-
 .footer a,
 .footer a:visited {
   text-decoration: none !important;
 }
-
 .footer dd {
   padding-bottom: 0.5em;
   margin: 0;
-  color: #686868;
+  color: rgb(104, 104, 104);
   text-decoration: none !important;
 }
-
 .footer dd:hover {
   color: white;
 }
@@ -376,7 +342,6 @@ button {
   border: 2px solid #4e0000;
   border-radius: 4px;
 }
-
 #learn:hover {
   background-color: black;
   color: white;
@@ -399,14 +364,15 @@ button {
     display: flex;
     justify-content: center;
   }
+
   h2 {
     text-align: center;
   }
+
   .textBack {
     display: block;
   }
 }
-
 #aboutPage {
   display: flex;
   align-items: center;
@@ -415,18 +381,15 @@ button {
   background-size: cover;
   background-attachment: fixed;
 }
-
 #aboutPage h1 {
   text-align: center;
   color: white;
   font-size: calc(3vw + 3vh);
   padding-top: 10vh;
 }
-
 #aboutPage h1:hover {
   color: #4e0000;
 }
-
 #aboutPage p {
   margin-left: auto;
   margin-right: auto;
@@ -436,7 +399,6 @@ button {
   color: white;
   font-size: calc(0.75vw + 0.75vh);
 }
-
 #aboutPage main {
   display: flex;
   justify-content: center;
@@ -450,7 +412,6 @@ button {
   box-sizing: border-box;
   margin-bottom: 5vh;
 }
-
 #aboutPage .employeeCard {
   width: calc(20vw + 20vh);
   height: calc(20vw + 20vh);
@@ -459,21 +420,17 @@ button {
   z-index: 2;
   cursor: pointer;
 }
-
 #aboutPage .employeeCard:hover .front {
   transform: rotateY(180deg);
 }
-
 #aboutPage .employeeCard:hover .back {
   transform: none;
 }
-
 #aboutPage .employeeCard p,
 #aboutPage .employeeCard h1 {
   width: 100%;
   padding: 0;
 }
-
 #aboutPage .employeeCard p {
   width: 100%;
   height: 100%;
@@ -483,12 +440,10 @@ button {
   padding-right: calc(0.5vw + 0.5vh);
   line-height: 1.2em;
 }
-
 #aboutPage .employeeCard h1 {
   font-size: calc(0.07 * (20vw + 20vh));
   text-align: center;
 }
-
 #aboutPage .employeeCard .front,
 #aboutPage .employeeCard .back {
   position: absolute;
@@ -498,13 +453,11 @@ button {
   height: 100%;
   background-color: #4e0000;
 }
-
 #aboutPage .employeeCard .front img,
 #aboutPage .employeeCard .back img {
   width: 100%;
   height: 80%;
 }
-
 #aboutPage .employeeCard .back {
   transform: rotateY(180deg);
 }
@@ -522,18 +475,15 @@ button {
   background-attachment: fixed;
   background-size: cover;
 }
-
 .gameBody img {
   width: 100%;
   border-bottom: 5vh solid #0f0f0f;
   margin-bottom: 50vh;
 }
-
 .gameBody h1 {
   text-align: center;
   font-size: calc(2vw + 2vh);
 }
-
 .gameBody p {
   width: 75%;
   text-align: center;
@@ -542,14 +492,12 @@ button {
   line-height: 2rem;
   font-size: calc(0.75vw + 0.75vh);
 }
-
 .gameBody p#progress {
   font-size: calc(1.5vw + 1.5vh);
   margin-top: 20vh;
   margin-bottom: 20vh;
   text-decoration: underline;
 }
-
 .gameBody div {
   background-color: rgba(10, 10, 10, 0.75);
   width: 80vw;
@@ -559,7 +507,6 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-
 .gameBody div div {
   width: auto;
   border: none;
@@ -572,7 +519,6 @@ button {
   padding-right: 5vw;
   margin: none;
 }
-
 .gameBody div div img {
   width: 30%;
   box-sizing: border-box;
@@ -581,7 +527,6 @@ button {
   border-radius: 20px;
   border: 5px solid gray;
 }
-
 .gameBody .footer {
   display: flex;
   padding: 1em;
@@ -590,34 +535,29 @@ button {
   color: white;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
-
 .gameBody .footer img {
   width: calc(7vw + 7vh);
   height: calc(7vw + 7vh);
   border: none;
   margin: 0;
 }
-
 .gameBody .footer dt {
   padding-bottom: 1.2em;
   color: darkgrey;
 }
-
 .gameBody .footer dt:hover {
   color: white;
 }
-
 .gameBody .footer dd {
   padding-bottom: 0.5em;
   margin: 0;
-  color: #686868;
+  color: rgb(104, 104, 104);
 }
-
 .gameBody .footer dd:hover {
   color: white;
 }
-
 .gameBody .footer #para {
   width: 50%;
 }
@@ -626,12 +566,10 @@ button {
   background-color: #0d0c0d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%2328262b' fill-opacity='0.28'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E");
 }
-
 #gamePage h1 {
   font-size: 2.8em;
   padding-bottom: 0.3em;
 }
-
 @media only screen and (max-width: 1200px) {
   #gamePage h1 {
     margin-top: 2em;
@@ -648,17 +586,14 @@ button {
     margin-right: auto;
   }
 }
-
 #gamePage h1 {
   text-align: center;
   color: white;
 }
-
 #gamePage h1:hover {
   transform: scale(1.1);
-  color: #6d0a6d;
+  color: rgb(109, 10, 109);
 }
-
 #gamePage p {
   color: white;
   text-align: center;
@@ -667,40 +602,33 @@ button {
   width: calc(37vw + 37vh);
   line-height: 1.4em;
 }
-
 #gamePage .game {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
 #gamePage .game h3 {
   padding-top: 0.7em;
   color: #4e0000;
   text-align: center;
 }
-
 #gamePage .game h3:hover {
   color: white;
   transform: scale(1.1);
 }
-
 #gamePage .game img {
   width: calc(18vw + 18vh);
   margin-top: 1em;
   border: 2px solid white;
   border-radius: 6px;
 }
-
 #gamePage .game img:hover {
   transform: scale(1.1);
 }
-
 #gamePage .game p {
   width: calc(18vw + 18vh);
   padding-bottom: 1.7em;
 }
-
 #gamePage form {
   border-top: 1rem solid white;
   display: flex;
@@ -708,13 +636,11 @@ button {
   flex-direction: column;
   background-color: gray;
 }
-
 #gamePage form label {
   font-size: calc(0.75vw + 0.75vh);
   position: static;
   color: white;
 }
-
 #gamePage form input {
   position: static;
   opacity: 1;
@@ -728,12 +654,10 @@ button {
   outline: none;
   position: relative;
 }
-
 #gamePage form input:focus {
   border-left: 0.25rem solid white;
   border-bottom: 0.25rem solid white;
 }
-
 #gamePage form select,
 #gamePage form option {
   font-family: "Press Start 2P", cursive;
@@ -743,12 +667,10 @@ button {
   background-color: black;
   color: white;
 }
-
 #gamePage form select {
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
-
 #gamePage form button {
   margin-bottom: 5vh;
   width: 15%;
@@ -770,7 +692,6 @@ button {
   align-items: center;
   justify-content: center;
 }
-
 #contactPage .socials {
   display: flex;
   justify-content: center;
@@ -778,7 +699,6 @@ button {
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
-
 #contactPage .socials .icon {
   width: calc(5vw + 5vh);
   height: calc(4.5vw + 4.5vh);
@@ -786,19 +706,15 @@ button {
   transition: transform 0.2s, filter 0.2s;
   cursor: pointer;
 }
-
 #contactPage .socials .icon:hover {
   transform: scale(1.2);
   filter: none;
 }
-
 #contactPage h1 {
   font-size: calc(3vw + 3vh);
 }
-
 #contactPage p {
   padding-left: 5vw;
   padding-right: 5vw;
   font-size: calc(1.5vw + 1.5vh);
-}
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */
