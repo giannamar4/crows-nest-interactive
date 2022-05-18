@@ -198,7 +198,7 @@ button {
   }
 }
 
-//Section for the about us page
+//Section for the about us page :D
 #aboutPage {
   display: flex;
   align-items: center;
@@ -207,9 +207,30 @@ button {
   background-size: cover;
   background-attachment: fixed;
 
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: calc(3vw + 3vh);
+    padding-top: 10vh;
+    &:hover {
+      color: $darkred;
+    }
+  }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(39vw + 39vh);
+    max-width: 100%;
+    box-sizing: border-box;
+    color: white;
+    font-size: calc(0.75vw + 0.75vh);
+  }
+
   main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    row-gap: 5vw;
+    column-gap: 5vh;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -236,15 +257,20 @@ button {
     p,
     h1 {
       width: 100%;
-      text-align: center;
+      padding: 0;
     }
     p {
       width: 100%;
       height: 100%;
       font-size: calc(0.06 * (20vw + 20vh));
+      box-sizing: border-box;
+      padding-left: calc(0.5vw + 0.5vh);
+      padding-right: calc(0.5vw + 0.5vh);
+      line-height: 1.2em;
     }
     h1 {
-      font-size: calc(2vw + 2vh);
+      font-size: calc(0.07 * (20vw + 20vh));
+      text-align: center;
     }
     .front,
     .back {
@@ -253,7 +279,7 @@ button {
       transition: transform 1s;
       width: 100%;
       height: 100%;
-      background-color: blue;
+      background-color: $darkred;
       img {
         width: 100%;
         height: 80%;
@@ -504,32 +530,6 @@ button {
       font-size: calc(1vw + 1vh);
       text-decoration: none;
     }
-  }
-}
-
-// about page! :D
-#aboutPage {
-  h1 {
-    text-align: center;
-    color: white;
-    font-size: 2.4em;
-    &:hover {
-      color: $darkred;
-    }
-  }
-  #abti {
-    background-color: rgb(245, 245, 245, 0.5);
-    border: 2px solid black;
-    padding: 1em;
-  }
-  p {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(39vw + 39vh);
-    color: black;
-
-    font-size: 1.1em;
-    line-height: 1.3em;
   }
 }
 
