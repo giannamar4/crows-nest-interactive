@@ -12,7 +12,6 @@ body {
   background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P', cursive;
   width: 100%;
 }
 
@@ -23,7 +22,6 @@ section {
   width: 100%;
 }
 
-@import 'partials/_navbar.scss';
 
 // carousel
 .carousel {
@@ -105,7 +103,6 @@ h2 {
   margin-right: auto;
   font-size: 1.7rem;
   color: whitesmoke;
-  font-family: 'Koulen', cursive;
 }
 
 button {
