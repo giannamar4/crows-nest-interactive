@@ -274,7 +274,7 @@ h2:hover {
   line-height: 1.4em;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.7rem;
+  font-size: calc(1.4vw + 1.4vh);
   color: whitesmoke;
   font-family: "Koulen", cursive;
 }
@@ -305,6 +305,7 @@ button {
   background-color: rgba(87, 83, 83, 0.5);
   border: 2px solid #4e0000;
   display: inline-block;
+  padding: 0.1em;
 }
 
 .footer {
@@ -362,7 +363,7 @@ button {
 
 @media only screen and (max-width: 1493px) {
   .main {
-    height: 150vh;
+    height: auto;
   }
   .main img {
     float: none;
