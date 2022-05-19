@@ -6,6 +6,11 @@ class GamePage {
         this.progress = progress;
         this.hasImages = hasImages;
     }
+
+    get getName() {return this.name;}
+    get getDescription() {return this.description;}
+    get getProgress() {return this.progress;}
+    get getHasImages() {return this.hasImages;}
 }
 
 //Map that holds all of the information for all 3 game page
@@ -28,23 +33,23 @@ const generatePage = () => {
     
     //Generates the banner and the background for the page
     const banner = document.createElement("img");
-    banner.setAttribute("src",`./images/${gameInfo["name"]}Banner.png`);
+    banner.setAttribute("src",`./images/${gameInfo.getName}Banner.png`);
     makeSection([banner]);
-    document.getElementsByClassName("gameBody")[0].style.backgroundImage = `url(./images/${gameInfo["name"]}Background.webp)`;
+    document.getElementsByClassName("gameBody")[0].style.backgroundImage = `url(./images/${gameInfo.getName}Background.webp)`;
 
     //Generates the game title and description
     const descriptionSection = document.createElement("div");
     const title = document.createElement("h1");
-    title.textContent = `Welcome to ${gameInfo["name"].substring(0,1).toUpperCase()+gameInfo["name"].substring(1,gameInfo["name"].length)}`;
+    title.textContent = `Welcome to ${gameInfo.getName.substring(0,1).toUpperCase()+gameInfo.getName.substring(1,gameInfo.getName.length)}`;
     const description = document.createElement("p");
-    description.textContent = gameInfo["description"];
+    description.textContent = gameInfo.getDescription;
     descriptionSection.appendChild(title);
     descriptionSection.appendChild(description);
     makeSection([descriptionSection]);
 
     //Generates the release progress
     const progress = document.createElement("p");
-    progress.textContent = `Release Progress: ${gameInfo["progress"]}`;
+    progress.textContent = `Release Progress: ${gameInfo.getProgress}`;
     makeSection([progress]);
 
     //Generates the gallery for the page
@@ -53,11 +58,11 @@ const generatePage = () => {
     galleryTitle.textContent = "Gallery";
     gallerySection.appendChild(galleryTitle);
     const galleryDiv = document.createElement("div");
-    if(gameInfo["hasImages"]) {
+    if(gameInfo.getHasImages) {
         for(let i=1; i<=3; i++) {
             const image = document.createElement("img");
             image.setAttribute("alt",`Screenshot ${i}`);
-            image.setAttribute("src",`./images/${gameInfo["name"] + i}.png`);
+            image.setAttribute("src",`./images/${gameInfo.getName + i}.png`);
             galleryDiv.appendChild(image);
         }
         gallerySection.appendChild(galleryDiv);
