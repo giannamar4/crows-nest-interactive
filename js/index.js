@@ -33,6 +33,7 @@ const startInterval = () => {
 const stopInterval = () => {clearInterval(interval);}
 window.addEventListener("DOMContentLoaded",startInterval);
 
+//Lets the user manually change the carousel's image using the two arrows
 document.getElementsByClassName("prev")[0].addEventListener("mousedown",()=>{
   switchSlides(-1);
   stopInterval();

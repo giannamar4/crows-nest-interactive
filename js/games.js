@@ -1,3 +1,4 @@
+//Makes the newsletter submission work while requiring that you answer both of the text inputs
 document.getElementsByTagName("button")[0].addEventListener("mousedown",()=> {
     const inputs = document.getElementsByTagName("input");
     if(inputs[1].value!="" && inputs[2].value!="") {
