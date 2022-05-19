@@ -541,7 +541,7 @@ button {
 .gameBody img {
   width: 100%;
   border-bottom: 5vh solid #0f0f0f;
-  margin-bottom: 50vh;
+  margin-bottom: calc(10vh + 10vw);
 }
 
 .gameBody h1 {
