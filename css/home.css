@@ -390,9 +390,12 @@ button {
 #aboutPage h1:hover {
   color: #4e0000;
 }
+  padding: 1em;
+  border: 2px solid black;
+  color: black;
+}
 #aboutPage p {
   margin-left: auto;
-  margin-right: auto;
   width: calc(39vw + 39vh);
   max-width: 100%;
   box-sizing: border-box;
