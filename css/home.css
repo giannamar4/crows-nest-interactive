@@ -197,13 +197,12 @@ a:hover::before {
 .carousel {
   position: relative;
   margin: auto;
-  height: 100vh;
 }
 
 .slides {
   transition: opacity 1s;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   opacity: 0;
   position: absolute;
   z-index: -1;
@@ -213,7 +212,7 @@ a:hover::before {
   z-index: 1;
 }
 .slides img {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
