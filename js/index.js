@@ -1,6 +1,12 @@
 //Sets the height of the carousel container to match the height of the images
-const carousel = document.getElementsByClassName("carousel")[0];
-carousel.style.height = window.getComputedStyle(document.getElementsByClassName("slides")[0].children[0])["height"];
+const adjustBanner = () => {
+  console.log("test");
+  const carousel = document.getElementsByClassName("carousel")[0];
+  carousel.style.height = window.getComputedStyle(document.getElementsByClassName("slides")[0].children[0])["height"];  
+}
+
+adjustBanner();
+screen.orientation.addEventListener("change",adjustBanner);
 
 //Allows the user to manually switch between banners
 var currentSlide = 0;
