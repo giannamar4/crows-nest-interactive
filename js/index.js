@@ -1,6 +1,5 @@
 //Sets the height of the carousel container to match the height of the images
 const adjustBanner = () => {
-  console.log("test");
   const carousel = document.getElementsByClassName("carousel")[0];
   carousel.style.height = window.getComputedStyle(document.getElementsByClassName("slides")[0].children[0])["height"];  
 }
