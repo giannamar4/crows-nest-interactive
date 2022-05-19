@@ -7,7 +7,7 @@ body {
   background-color: rgb(24, 24, 24);
   margin: 0;
   padding: 0;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@ label::before {
   left: 0;
   right: 0;
   bottom: 0;
-  content: "";
+  content: '';
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -56,14 +56,15 @@ label .exie {
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 label .exie::before,
-label .exie .bar, label .exie::after {
+label .exie .bar,
+label .exie::after {
   position: absolute;
   left: 0;
   display: block;
   width: 100%;
   height: 12%;
   background: white;
-  content: "";
+  content: '';
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 label .exie .bar {
@@ -106,7 +107,7 @@ nav::before {
   z-index: -1;
   width: 25em;
   background: #4e0000;
-  content: "";
+  content: '';
   transform: skewX(15deg) translateX(-100%);
   transform-origin: bottom left;
   will-change: transform;
@@ -128,7 +129,7 @@ nav a {
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 nav a::before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 100%;
@@ -159,7 +160,8 @@ nav a:nth-child(5) {
 nav a:nth-child(6) {
   transition-delay: 0s, 350ms;
 }
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
   color: white;
   filter: brightness(150%);
 }
@@ -168,42 +170,44 @@ a:hover::before {
   transform: scaleX(1);
 }
 
-[id=navcheck]:checked + label::before {
+[id='navcheck']:checked + label::before {
   opacity: 1;
   pointer-events: auto;
 }
-[id=navcheck]:checked + label .exie::before, [id=navcheck]:checked + label .exie::after {
+[id='navcheck']:checked + label .exie::before,
+[id='navcheck']:checked + label .exie::after {
   width: 141.42%;
 }
-[id=navcheck]:checked + label .exie::before {
+[id='navcheck']:checked + label .exie::before {
   transform: rotate(45deg) translateY(-50%);
 }
-[id=navcheck]:checked + label .exie::after {
+[id='navcheck']:checked + label .exie::after {
   transform: rotate(-45deg) translateY(50%);
 }
-[id=navcheck]:checked + label .exie .bar {
+[id='navcheck']:checked + label .exie .bar {
   transform: scale(0.1);
 }
-[id=navcheck]:checked ~ nav {
+[id='navcheck']:checked ~ nav {
   transform: translateX(0);
 }
-[id=navcheck]:checked ~ nav::before {
+[id='navcheck']:checked ~ nav::before {
   transform: skewX(15deg) translateX(0);
 }
-[id=navcheck]:checked ~ nav a {
+[id='navcheck']:checked ~ nav a {
   transform: translateX(0);
 }
 
 .carousel {
   position: relative;
   margin: auto;
-  height: 100vh;
+  height: fit-content;
+  width: 100%;
 }
 
 .slides {
   transition: opacity 1s;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 0;
   position: absolute;
   z-index: -1;
@@ -266,12 +270,13 @@ h2:hover {
 
 #p1 {
   width: calc(42vw + 42vh);
+  max-width: 80%;
   line-height: 1.4em;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.7em;
   color: whitesmoke;
-  font-family: "Koulen", cursive;
+  font-family: 'Koulen', cursive;
 }
 
 button {
@@ -281,7 +286,7 @@ button {
 }
 
 .main {
-  background: url("../images/back1.gif");
+  background: url('../images/back1.gif');
   background-size: cover;
   margin: 0;
   padding-bottom: 8em;
@@ -310,6 +315,7 @@ button {
   color: white;
   width: 100%;
   box-sizing: border-box;
+  font-size: calc(0.5vw + 0.5vh);
 }
 .footer img {
   width: calc(7vw + 7vh);
@@ -338,7 +344,7 @@ button {
 
 #learn {
   height: 3.3em;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   border: 2px solid #4e0000;
   border-radius: 4px;
 }
@@ -377,7 +383,7 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url("../images/aboutBackground.gif");
+  background-image: url('../images/aboutBackground.gif');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -390,12 +396,15 @@ button {
 #aboutPage h1:hover {
   color: #4e0000;
 }
+#aboutPage #abti {
+  background-color: rgba(255, 255, 255, 0.5) !important;
   padding: 1em;
   border: 2px solid black;
   color: black;
 }
 #aboutPage p {
   margin-left: auto;
+  margin-right: auto;
   width: calc(39vw + 39vh);
   max-width: 100%;
   box-sizing: border-box;
@@ -647,7 +656,7 @@ button {
 #gamePage form input {
   position: static;
   opacity: 1;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   margin-bottom: 5vh;
   width: 25%;
   height: 10vh;
@@ -663,7 +672,7 @@ button {
 }
 #gamePage form select,
 #gamePage form option {
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   width: 25%;
   height: 10vh;
   cursor: pointer;
@@ -678,7 +687,7 @@ button {
   margin-bottom: 5vh;
   width: 15%;
   height: 10vh;
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   cursor: pointer;
   background-color: black;
   color: white;
@@ -720,4 +729,4 @@ button {
   padding-left: 5vw;
   padding-right: 5vw;
   font-size: calc(1.5vw + 1.5vh);
-}/*# sourceMappingURL=home.css.map */
+} /*# sourceMappingURL=home.css.map */
